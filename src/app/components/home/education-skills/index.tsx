@@ -49,7 +49,7 @@ const EducationSkills = () => {
                       </div>
                       <div className="flex-1 flex flex-col gap-2">
                         <h5>{value?.title}</h5>
-                        <p className="font-normal">{value?.description}</p>
+                        <p className="font-normal whitespace-pre-wrap">{value?.description}</p>
                       </div>
                     </div>
                   );

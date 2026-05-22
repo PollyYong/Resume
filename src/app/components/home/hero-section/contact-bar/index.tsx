@@ -1,8 +1,10 @@
 "use client";
+
+import { useState } from "react";
 import { getDataPath, getImgPath } from "@/utils/image";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const ContactBar = () => {
   const [contactBarData, setContactBarData] = useState<any>(null);
@@ -33,8 +35,7 @@ const ContactBar = () => {
                 (value: any, index: number) => (
                   <Link
                     key={index}
-                    onClick={(e) => e.preventDefault()}
-                    href={"#!"}
+                    href={value?.link || "#!"}
                     className="flex items-center gap-2 lg:gap-4 text-sm md:text-base"
                   >
                     <Image
@@ -58,8 +59,9 @@ const ContactBar = () => {
               {contactBarData?.socialItems?.map((value: any, index: number) => (
                 <Link
                   key={index}
-                  onClick={(e) => e.preventDefault()}
-                  href={"#!"}
+                  href={value?.link || "#!"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Image
                     src={getImgPath(value?.icon)}
