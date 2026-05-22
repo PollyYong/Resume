@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 const Contact = () => {
   const [contactData, setContactData] = useState<any>(null);
   const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
+  const [form, setFormData] = useState({
     name: "",
     number: "",
     email: "",
@@ -30,34 +30,43 @@ const Contact = () => {
   }, []);
 
   const reset = () => {
-    formData.name = "";
-    formData.number = "";
-    formData.email = "";
-    formData.message = "";
+    setFormData({
+      name: "",
+      number: "",
+      email: "",
+      message: "",
+    });
   };
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    fetch("https://formsubmit.co/ajax/bhainirav772@gmail.com", {
-      method: "POST",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify({
-        name: formData.name,
-        number: formData.number,
-        email: formData.email,
-        message: formData.message,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setSubmitted(data.success);
-        reset();
-      })
-      .catch((error) => {
-        console.log(error.message);
+    const formUrlEntries = new URLSearchParams();
+    formUrlEntries.append("entry.927399612", form.name);
+    formUrlEntries.append("entry.95167746", form.number);
+    formUrlEntries.append("entry.1384109903", form.email);
+    formUrlEntries.append("entry.860400273", form.message);
+
+    const googleFormUrl = "https://docs.google.com/forms/u/0/d/1ntitB62HQLxqOHOEYSMj4eDS61veo5lLGJhcWj1yRig/formResponse";
+
+    try {
+      await fetch(googleFormUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: formUrlEntries.toString(),
       });
+
+      setSubmitted(true);
+      reset();
+    } catch (error: any) {
+      alert('Something went wrong. Please try again.');
+      console.error("Form submission error:", error.message);
+    }
   };
+
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -87,7 +96,7 @@ const Contact = () => {
                       className="input"
                       id="name"
                       name="name"
-                      value={formData.name}
+                      value={form.name}
                       onChange={handleChange}
                     />
                   </div>
@@ -101,7 +110,7 @@ const Contact = () => {
                       id="number"
                       type="number"
                       name="number"
-                      value={formData.number}
+                      value={form.number}
                       onChange={handleChange}
                     />
                   </div>
@@ -116,7 +125,7 @@ const Contact = () => {
                     id="email"
                     type="email"
                     name="email"
-                    value={formData.email}
+                    value={form.email}
                     onChange={handleChange}
                   />
                 </div>
@@ -129,7 +138,7 @@ const Contact = () => {
                     className="input"
                     name="message"
                     id="message"
-                    value={formData.message}
+                    value={form.message}
                     onChange={handleChange}
                     rows={2}
                   />
@@ -143,7 +152,7 @@ const Contact = () => {
                       height={30}
                     />
                     <p className="text-secondary">
-                      Great!!! Email has been Successfully Sent. I will get intouch asap.
+                      Email has been Successfully Sent.
                     </p>
                   </div>
                 )}
@@ -157,38 +166,6 @@ const Contact = () => {
                 </button>
               </div>
             </form>
-            {/* <div className="flex flex-col sm:flex-row md:flex-col justify-between gap-5 md:gap-20 items-center md:items-end">
-              <div className="flex flex-wrap flex-row md:flex-col items-start md:items-end gap-4 md:gap-6">
-                {contactData?.socialLinks?.map((value: any, index: any) => {
-                  return (
-                    <div key={index}>
-                      <Link
-                        className="text-base sm:text-lg font-normal text-secondary hover:text-primary"
-                        href={value?.href || "#!"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {value?.title}
-                      </Link>
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="flex flex-wrap justify-center gap-5 lg:gap-11 items-end">
-                {contactData?.contactInfo?.map((value: any, index: any) => {
-                  return (
-                    <div key={index}>
-                      <Link
-                        href={value?.link || "#!"}
-                        className="text-base lg:text-lg text-black font-normal border-b border-black pb-3 hover:text-primary hover:border-primary"
-                      >
-                        {value?.label}
-                      </Link>
-                    </div>
-                  );
-                })}
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

@@ -23,11 +23,11 @@ const AboutMe = () => {
             </div>
 
             <div className="pt-10 xl:pt-16 flex gap-10 items-center justify-between">
-              <div className="w-[303px] h-[440px] hidden lg:flex">
+              <div className="w-[350px] h-[440px] hidden lg:flex">
                 <Image
-                  src={getImgPath("/images/home/about-me/about-banner-img.svg")}
+                  src={getImgPath("/images/home/about-me/aboutMe.png")}
                   alt="about-banner"
-                  width={303}
+                  width={350}
                   height={440}
                   className="w-full h-full"
                 />
