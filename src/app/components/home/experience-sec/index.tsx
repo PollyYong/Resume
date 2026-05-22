@@ -4,8 +4,8 @@ const ExperienceSec = () => {
     const experiences = [
         {
             year: "2025",
-            title: "Web and mobile Developer Intern",
-            company: "https://www.cyber-village.net/",
+            title: "Web and Mobile Developer Intern",
+            company: "Cyber Village Sdn Bhd",
             type: "Internship",
             description: "Created a cross-platform interface that synchronises online and mobile UI/UX, assuring a consistent and seamless user experience across every platform.\nDeveloped a dynamic file-handling feature that allows users to upload and preview documents before submission, increasing form accuracy and user completion rates.\nCreated a task-scheduling engine that enables users to schedule, reschedule, and cancel tasks, increasing user liberty and task management efficiency.\nConducted complete SIT testing and debugging with SOAP UI and Android Emulators to identify problems while maintaining high system reliability and security standards.\nSuccessfully completed 80% of project requirements within the Agile timeline by streamlining front-end and back-end integration, resulting in faster delivery."
         },
