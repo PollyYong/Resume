@@ -7,7 +7,7 @@ const ExperienceSec = () => {
             title: "Web and mobile Developer Intern",
             company: "https://www.cyber-village.net/",
             type: "Internship",
-            description: "Created a cross-platform interface that synchronises online and mobile UI/UX, assuring a consistent and seamless user experience across every platform.\n Developed a dynamic file-handling feature that allows users to upload and preview documents before submission, increasing form accuracy and user completion rates.\nCreated a task-scheduling engine that enables users to schedule, reschedule, and cancel tasks, increasing user liberty and task management efficiency.\nConducted complete SIT testing and debugging with SOAP UI and Android Emulators to identify problems while maintaining high system reliability and security standards.\nSuccessfully completed 80% of project requirements within the Agile timeline by streamlining front-end and back-end integration, resulting in faster delivery."
+            description: "Created a cross-platform interface that synchronises online and mobile UI/UX, assuring a consistent and seamless user experience across every platform.\nDeveloped a dynamic file-handling feature that allows users to upload and preview documents before submission, increasing form accuracy and user completion rates.\nCreated a task-scheduling engine that enables users to schedule, reschedule, and cancel tasks, increasing user liberty and task management efficiency.\nConducted complete SIT testing and debugging with SOAP UI and Android Emulators to identify problems while maintaining high system reliability and security standards.\nSuccessfully completed 80% of project requirements within the Agile timeline by streamlining front-end and back-end integration, resulting in faster delivery."
         },
         // {
         //     year: "2019",
@@ -31,6 +31,20 @@ const ExperienceSec = () => {
         //     description: "Release of Letraset sheets containing Lorem Ipsum passages and more recently with desktop publishing software"
         // }
     ];
+
+    const renderDescription = (text: string) => {
+        if (!text) return null;
+        const lines = text.split("\n").map((line) => line.trim()).filter(Boolean);
+        return (
+            <ul className="list-disc pl-5 space-y-2 text-justify">
+                {lines.map((line, index) => (
+                    <li key={index} className="leading-relaxed text-base text-justify">
+                        {line}
+                    </li>
+                ))}
+            </ul>
+        );
+    };
 
     return (
         <section>
@@ -72,7 +86,7 @@ const ExperienceSec = () => {
                                 </div>
 
                                 <div className="pl-8 sm:pl-0">
-                                    <p className="leading-relaxed text-base">{exp.description}</p>
+                                    {renderDescription(exp.description)}
                                 </div>
                             </div>
                         ))}

@@ -143,8 +143,7 @@ const Contact = () => {
                       height={30}
                     />
                     <p className="text-secondary">
-                      Great!!! Email has been Successfully Sent. We will get in
-                      touch asap.
+                      Great!!! Email has been Successfully Sent. I will get intouch asap.
                     </p>
                   </div>
                 )}
@@ -158,7 +157,7 @@ const Contact = () => {
                 </button>
               </div>
             </form>
-            <div className="flex flex-col sm:flex-row md:flex-col justify-between gap-5 md:gap-20 items-center md:items-end">
+            {/* <div className="flex flex-col sm:flex-row md:flex-col justify-between gap-5 md:gap-20 items-center md:items-end">
               <div className="flex flex-wrap flex-row md:flex-col items-start md:items-end gap-4 md:gap-6">
                 {contactData?.socialLinks?.map((value: any, index: any) => {
                   return (
@@ -189,7 +188,7 @@ const Contact = () => {
                   );
                 })}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

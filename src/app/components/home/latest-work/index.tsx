@@ -24,11 +24,16 @@ const LatestWork = () => {
 
   const renderDescription = (text: string) => {
     if (!text) return null;
-    return text.split("\n").map((line, index) => (
-      <div key={index}>
-        {line}
-      </div>
-    ));
+    const lines = text.split("\n").map((line) => line.trim()).filter(Boolean);
+    return (
+      <ul className="list-disc pl-5 text-sm md:text-base space-y-2 text-justify">
+        {lines.map((line, index) => (
+          <li key={index} className="leading-relaxed text-justify">
+            {line}
+          </li>
+        ))}
+      </ul>
+    );
   };
 
   return (
@@ -45,20 +50,22 @@ const LatestWork = () => {
                 return (
                   <div
                     key={index}
-                    className="group flex flex-col gap-3 xl:gap-6"
+                    className="flex flex-col gap-3 xl:gap-6"
                   >
-                    <div className="relative">
+                    <Link
+                      href={value?.link || "#!"}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="relative block rounded-lg overflow-hidden aspect-[4/3]"
+                    >
                       <Image
                         src={getImgPath(value?.image)}
-                        alt="image"
-                        width={570}
-                        height={414}
-                        className="rounded-lg w-full h-full object-cover"
+                        alt={value?.title || "project image"}
+                        fill
+                        sizes="(min-width: 1024px) 570px, 100vw"
+                        className="object-cover"
                       />
-                      <Link
-                        href={value?.link || "#!"}
-                        className="absolute top-0 left-0 backdrop-blur-xs bg-primary/15 w-full h-full hidden group-hover:flex rounded-lg"
-                      >
+                      <div className="absolute inset-0 backdrop-blur-xs bg-primary/15 flex items-center justify-center opacity-0 transition-opacity duration-200 hover:opacity-100">
                         <span className="flex justify-center items-center p-5 w-full">
                           <svg
                             width="65"
@@ -83,8 +90,8 @@ const LatestWork = () => {
                             />
                           </svg>
                         </span>
-                      </Link>
-                    </div>
+                      </div>
+                    </Link>
                     <div className="flex flex-col gap-0 xl:gap-2">
                       <div className="flex items-center justify-between">
                         <Link href={`${value.slug}`}>
@@ -97,9 +104,7 @@ const LatestWork = () => {
                           height={30}
                         />
                       </div>
-                      <p className="text-sm md:text-base whitespace-pre-wrap">
-                        {value?.Description}
-                      </p>
+                      {renderDescription(value?.Description)}
                     </div>
                   </div>
                 );

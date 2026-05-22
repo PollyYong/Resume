@@ -21,6 +21,20 @@ const EducationSkills = () => {
     fetchData();
   }, []);
 
+  const renderDescription = (text: string) => {
+    if (!text) return null;
+    const lines = text.split("\n").map((line) => line.trim()).filter(Boolean);
+    return (
+      <ul className="list-disc pl-5 text-sm md:text-base space-y-2">
+        {lines.map((line, index) => (
+          <li key={index} className="leading-relaxed">
+            {line}
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
   return (
     <section>
       <div className="border-t border-softGray overflow-hidden">
@@ -40,7 +54,7 @@ const EducationSkills = () => {
               <p className="text-xl text-orange-500">( 03 )</p>
             </div>
             <div className="flex flex-col lg:flex-row items-center gap-10 xl:gap-20">
-              <div className="w-full lg:max-w-md flex flex-col gap-0 xl:gap-8">
+              <div className="w-full lg:max-w-md flex flex-col gap-0 xl:gap-8  text-justify">
                 {educationData?.education?.map((value: any, index: any) => {
                   return (
                     <div key={index} className="flex items-start gap-6">
@@ -49,7 +63,7 @@ const EducationSkills = () => {
                       </div>
                       <div className="flex-1 flex flex-col gap-2">
                         <h5>{value?.title}</h5>
-                        <p className="font-normal whitespace-pre-wrap">{value?.description}</p>
+                        {renderDescription(value?.description)}
                       </div>
                     </div>
                   );

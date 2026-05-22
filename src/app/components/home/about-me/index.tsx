@@ -33,7 +33,7 @@ const AboutMe = () => {
                 />
               </div>
 
-              <div className="w-full lg:max-w-2xl flex-1">
+              <div className="w-full lg:max-w-2xl flex-1 text-justify">
                 <p>
                   A fresh graduate at Heriot-Watt University studying in BSc Computer Science student with strong software engineering and full-stack development skills. Experienced in building and integrating modern software systems through academic and industry projects, with exposure to AI, e-commerce platforms and planning concepts. An achiever who is eager to learn, adapt and take on challenges that extend technical skills. Thrives in collaborative environments and is motivated to contribute to impactful, customer-focused solutions that support business growth and infrastructure modernisation.
                 </p>
@@ -56,7 +56,7 @@ const AboutMe = () => {
                 <div className="pt-8 xl:pt-14 flex flex-col sm:flex-row items-center gap-4">
                   <div className="flex items-center gap-3.5">
                     <Image
-                      src={getImgPath("/images/icon/lang-icon.svg")}
+                      src={getImgPath("/images/icon/language.png")}
                       alt="lang-icon"
                       width={30}
                       height={30}
