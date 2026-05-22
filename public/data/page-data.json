@@ -15,9 +15,9 @@
       },
       {
         "type": "website",
-        "label": "www.mywebsite.com",
+        "label": "resume-rosy-two.vercel.app",
         "icon": "/images/icon/web-icon.svg",
-        "link": "https://www.mywebsite.com"
+        "link": "https://resume-rosy-two.vercel.app"
       }
     ],
     "socialItems": [
