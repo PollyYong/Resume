@@ -22,6 +22,15 @@ const LatestWork = () => {
     fetchData();
   }, []);
 
+  const renderDescription = (text: string) => {
+    if (!text) return null;
+    return text.split("\n").map((line, index) => (
+      <div key={index}>
+        {line}
+      </div>
+    ));
+  };
+
   return (
     <section>
       <div className="bg-softGray">
@@ -47,8 +56,7 @@ const LatestWork = () => {
                         className="rounded-lg w-full h-full object-cover"
                       />
                       <Link
-                        onClick={(e) => e.preventDefault()}
-                        href={"#!"}
+                        href={value?.link || "#!"}
                         className="absolute top-0 left-0 backdrop-blur-xs bg-primary/15 w-full h-full hidden group-hover:flex rounded-lg"
                       >
                         <span className="flex justify-center items-center p-5 w-full">
@@ -89,7 +97,9 @@ const LatestWork = () => {
                           height={30}
                         />
                       </div>
-                      <p>Description: {value?.description}</p>
+                      <p className="text-sm md:text-base whitespace-pre-wrap">
+                        {value?.Description}
+                      </p>
                     </div>
                   </div>
                 );
