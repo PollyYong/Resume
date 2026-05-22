@@ -1,0 +1,16 @@
+{
+  "workData": [
+    {
+      "image": "/images/work/work-img-1.jpg",
+      "title": "TourMob",
+      "Description": "Created a personalised suggestion engine by combining multiple maps and travel APIs to generate routes that are perfectly suited to users' mobility needs.\n Using SQLite and Java-based backend services, a solid local-centric data architecture was developed, ensuring 100% system reliability and offline accessibility for users in low-connection areas.\n Implemented accessibility-based UI/UX guidelines aligned with UN SDG 10 (Reduced Inequalities) \n Managed the whole software development lifecycle with Github version control, resulting in a ready to use solution that solved critical accessibility issues in tourism. \n During experimental validation, the accessible-first and personalization UX/UI got a 85% positive user feedback rating, showing the effectiveness of removing travel barriers. ",
+      "slug": "Tourist Guide App"
+    },
+    {
+      "image": "/images/work/work-img-2.jpg",
+      "title": "Plantation",
+      "Description": "Developed and led the retail idea, executing the omni-channel strategy and business model design to combine online and in-store agriculture commerce.\n Using Wix, a fully working e-commerce platform was created, with automated workflows for safe transactions, subscriptions and product listings.\n Generated robust test cases for a range of customer scenarios, such as online orders, in-store returns and ongoing subscriptions, to optimise system dependability and user journey reliability.\n Organised collaborative team duties and integrated diverse content into a cohesive digital environment, ensuring that the project met all business objectives.",
+      "slug": "E-commerce Website"
+    }
+  ]
+}

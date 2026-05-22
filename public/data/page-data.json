@@ -1,0 +1,96 @@
+{
+  "contactBar": {
+    "contactItems": [
+      {
+        "type": "email",
+        "label": "pollyyong1254gmail.com",
+        "icon": "/images/icon/mail-icon.svg",
+        "link": "mailto:pollyyong1254gmail.com"
+      },
+      {
+        "type": "phone",
+        "label": "+6019 369 3522",
+        "icon": "/images/icon/call-icon.svg",
+        "link": "tel:+60193693522"
+      },
+      {
+        "type": "website",
+        "label": "www.mywebsite.com",
+        "icon": "/images/icon/web-icon.svg",
+        "link": "https://www.mywebsite.com"
+      }
+    ],
+    "socialItems": [
+      {
+        "platform": "linkedin",
+        "icon": "/images/icon/linkedin-icon.svg",
+        "link": "https://www.linkedin.com/in/yong-ka-pao-584b81331/"
+      },
+      {
+        "platform": "Github",
+        "icon": "/images/icon/github-icon.svg",
+        "link": "https://www.github.com/PollyYong"
+      }
+    ]
+  },
+  "educationData": {
+    "education": [
+      {
+        "title": "Bachelor (Hons) Computer Science - Heriot Watt University - 2024",
+        "description": "Software Development, Data Structure and Algorithm, Cybersecurity, e-Commerce, Machine Learning and AI, Robotics.\n Graduated with First Class Honours."
+      }
+    ],
+    "skills": [
+      {
+        "name": "Figma",
+        "icon": "/images/home/education-skill/figma-icon.svg",
+        "rating": 5
+      },
+      {
+        "name": "JavaScript",
+        "icon": "/images/home/education-skill/javascript.png",
+        "rating": 4
+      },
+      {
+        "name": "Java",
+        "icon": "/images/home/education-skill/java.png",
+        "rating": 4
+      },
+      {
+        "name": "Dart",
+        "icon": "/images/home/education-skill/dart.png",
+        "rating": 4
+      },
+      {
+        "name": "Python",
+        "icon": "/images/home/education-skill/python.jpeg",
+        "rating": 3
+      },
+      {
+        "name": "SQL",
+        "icon": "/images/home/education-skill/sql.png",
+        "rating": 4
+      }
+    ]
+  },
+  "contactLinks": {
+    "socialLinks": [
+      {
+        "title": "LinkedIn",
+        "href": "https://www.linkedin.com/in/yong-ka-pao-584b81331/"
+      }
+    ],
+    "contactInfo": [
+      {
+        "type": "email",
+        "label": "pollyyong1254gmail.com",
+        "link": "mailto:pollyyong1254gmail.com"
+      },
+      {
+        "type": "phone",
+        "label": "+6019 369 3522",
+        "link": "tel:+60193693522"
+      }
+    ]
+  }
+}
