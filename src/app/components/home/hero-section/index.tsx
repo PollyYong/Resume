@@ -26,13 +26,6 @@ const index = () => {
               A fresh graduate with a passion for creating innovative web and mobile applications.
             </p>
           </div>
-          <Image
-            src={getImgPath("/images/home/banner/banner-img.png")}
-            alt="banner-img"
-            width={685}
-            height={650}
-            className="block lg:hidden"
-          />
         </div>
       </div>
       {/* <div className="absolute right-0 top-0 hidden h-auto w-1/2 lg:block 2xl:h-171.5 2xl:w-187.5">
