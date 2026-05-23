@@ -13,6 +13,13 @@
       "Description": "Developed and led the retail idea, executing the omni-channel strategy and business model design to combine online and in-store agriculture commerce.\nUsing Wix, a fully working e-commerce platform was created, with automated workflows for safe transactions, subscriptions and product listings.\nGenerated robust test cases for a range of customer scenarios, such as online orders, in-store returns and ongoing subscriptions, to optimise system dependability and user journey reliability.\nOrganised collaborative team duties and integrated diverse content into a cohesive digital environment, ensuring that the project met all business objectives.",
       "slug": "E-commerce Website",
       "link": "https://plantation4242.wixsite.com/website"
+    },
+    {
+      "image": "/images/work/NZHome.jpg",
+      "title": "NZHome",
+      "Description": "Collaborated within a 7-member team to design and develop a system aimed at reducing energy consumption and generation inefficiencies. \nDeveloped a cloud-hosted web system deployed on Vercel, with PostgreSQL used for data storage. \nImplemented MQTT as the primary IoT communication protocol to transmit real-time data from smart devices to the database. \nBuilt the web application using HTML, CSS, and ReactJS. \n Contributed to both technical development and team coordination, supporting task organisation and project progress.",
+      "slug": "Energy Consumption and Generation Dashboard",
+      "link": "https://github.com/wailoon06/nzhome"
     }
   ]
 }
