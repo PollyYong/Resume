@@ -67,8 +67,33 @@
         "rating": 3
       },
       {
-        "name": "SQL",
+        "name": "HTML",
+        "icon": "/images/home/education-skill/html.png",
+        "rating": 4
+      },
+      {
+        "name": "CSS",
+        "icon": "/images/home/education-skill/css.png",
+        "rating": 4
+      },
+      {
+        "name": "TypeScript",
+        "icon": "/images/home/education-skill/typescript.png",
+        "rating": 4
+      },
+      {
+        "name": "MySQL",
         "icon": "/images/home/education-skill/sql.png",
+        "rating": 4
+      },
+      {
+        "name": "SQLite",
+        "icon": "/images/home/education-skill/SQLite.jpeg",
+        "rating": 4
+      },
+      {
+        "name": "GitHub",
+        "icon": "/images/icon/github.png",
         "rating": 4
       }
     ]
